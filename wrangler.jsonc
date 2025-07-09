@@ -1,19 +1,13 @@
-// wrangler.jsonc
 {
+  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "apex-ai-proxy",
-  "main": "dist/index.js",
-  "compatibility_date": "2024-07-09",
-  "node_compat": true,
-  "build": {
-    "command": "pnpm run build"
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-14",
+  "observability": {
+    "enabled": true
   },
   "vars": {
-    "ENVIRONMENT": "production"
-  },
-  "kv_namespaces": [
-    // 如果需要 KV 存储
-  ],
-  "d1_databases": [
-    // 如果需要 D1 数据库
-  ]
+    "MODEL_PROVIDER_CONFIG": "{\"DeepSeek-R1\":{\"providers\":[{\"provider\":\"aliyuncs\",\"base_url\":\"https://dashscope.aliyuncs.com/compatible-mode/v1\",\"api_key\":\"sk-xxx\",\"model\":\"deepseek-r1\"},{\"provider\":\"deepinfra\",\"base_url\":\"https://api.deepinfra.com/v1/openai\",\"api_key\":\"xxx\",\"model\":\"deepseek-ai/DeepSeek-R1\"},{\"provider\":\"azure\",\"base_url\":\"https://minjpe3817342715.services.ai.azure.com/models\",\"api_key\":\"xxx\",\"model\":\"DeepSeek-R1\"}]},\"Qwen-Max\":{\"providers\":[{\"provider\":\"aliyuncs\",\"base_url\":\"https://dashscope.aliyuncs.com/compatible-mode/v1\",\"api_key\":\"sk-xxx\",\"model\":\"qwen-max\"},{\"provider\":\"alibabacloud\",\"base_url\":\"https://dashscope-intl.aliyuncs.com/compatible-mode/v1\",\"api_key\":\"sk-xxx\",\"model\":\"qwen-max\"}]},\"gpt-4o-mini\":{\"providers\":[{\"provider\":\"azure\",\"base_url\":\"https://min-us-east2.openai.azure.com/openai/deployments/gpt-4o-mini\",\"api_key\":\"xxx\",\"model\":\"gpt-4o-mini\"}]},\"text-embedding-ada-002\":{\"providers\":[{\"provider\":\"openai\",\"base_url\":\"https://api.openai.com/v1\",\"api_key\":\"sk-xxx\",\"model\":\"text-embedding-ada-002\"},{\"provider\":\"azure\",\"base_url\":\"https://your-azure-endpoint.openai.azure.com/openai/deployments/text-embedding-ada-002\",\"api_key\":\"xxx\",\"model\":\"text-embedding-ada-002\"}]},\"text-embedding-3-small\":{\"providers\":[{\"provider\":\"openai\",\"base_url\":\"https://api.openai.com/v1\",\"api_key\":\"sk-xxx\",\"model\":\"text-embedding-3-small\"}]}}",
+    "SERVICE_API_KEY": "sk-4e5212a130ccb594f68ad050ac43423cacb48e85"
+  }
 }
