@@ -1,0 +1,19 @@
+// wrangler.jsonc
+{
+  "name": "apex-ai-proxy",
+  "main": "dist/index.js",
+  "compatibility_date": "2024-07-09",
+  "node_compat": true,
+  "build": {
+    "command": "pnpm run build"
+  },
+  "vars": {
+    "ENVIRONMENT": "production"
+  },
+  "kv_namespaces": [
+    // 如果需要 KV 存储
+  ],
+  "d1_databases": [
+    // 如果需要 D1 数据库
+  ]
+}
